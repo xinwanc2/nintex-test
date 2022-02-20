@@ -1,0 +1,19 @@
+<div fxLayout="column">
+    <div fxLayout="row">
+        <div fxFlex="100" class="px-2">
+            <label for="airline-name-search-criteria">Airline name: </label>
+            <input class="form-control" id="airline-name-search-criteria" />
+        </div>
+        <div fxFlex="30" class="px-2">
+            <label for="stops-search-criteria">Number of stops: </label>
+            <input
+                class="form-control"
+                id="stops-search-criteria"
+                type="number"
+            />
+        </div>
+        <div fxFlex="100" class="px-3 pt-3">
+            <button (click)="search()" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!--TODO: add pagination-->
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Airline</th>
+            <th scope="col">Number of stops</th>
+            <th scope="col">Inbound duration</th>
+            <th scope="col">Outbound duration</th>
+            <th scope="col">Total Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let itinerary of itineraries$ | async">
+            <td>
+                <img
+                    src="{{ itinerary.AirlineLogoAddress }}"
+                    alt="Airline logo"
+                />{{ itinerary.AirlineName }}
+            </td>
+            <td>
+                {{ itinerary.Stops }}
+            </td>
+            <td>
+                {{ itinerary.InboundFlightsDuration }}
+            </td>
+            <td>
+                {{ itinerary.OutboundFlightsDuration }}
+            </td>
+            <td>
+                {{ itinerary.TotalAmount | currency }}
+            </td>
+        </tr>
+    </tbody>
+</table>

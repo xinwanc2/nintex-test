@@ -1,0 +1,23 @@
+<mat-card style="box-shadow: none">
+    <mat-card-header>
+        <mat-card-title> Search Flight </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div fxLayout="column">
+            <div fxLayout="row" class="search-section">
+                <div fxFlex="20"></div>
+                <div fxFlex="100">
+                    <app-search></app-search>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxFlex="20" fxFlexOffset="5">
+                    <app-filter></app-filter>
+                </div>
+                <div fxFlex="100" fxFlexOffset="-5">
+                    <app-result></app-result>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
